@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEST PRODUCTS</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="img/logo_navbar.png" alt="Logo" height="40" class="me-2">
+        <!-- TEST PRODUCTS -->
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">หน้าแรก</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">เกี่ยวกับเรา</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">สินค้าและบริการ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">ติดต่อเรา</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Product Section -->
+  <section class="py-5 bg-light products-section">
+    <div class="container">
+      <h1 class="text-center mb-5 fw-bold">PRODUCTS</h1>
+
+      <div class="row g-4 justify-content-center">
+
+        <!-- Card 1 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm openDetail"
+              data-bs-toggle="modal" data-bs-target="#detailModal"
+              data-title="LogInS LAB"
+              data-img="img/1.jpg"
+              data-desc="ปัจจุบัน บริษัท แล็บ พลัส จำกัด ได้พัฒนาปรับปรุงโปรแกรม LIS ของบริษัทฯ ให้สามารถรองรับการทำงานของห้องปฏิบัติการในโรงพยาบาลได้ทุกขนาด รวมถึงพัฒนาคุณลักษณะและความสามารถของโปรแกรม ให้สอดคล้องกับมาตรฐานระบบ LIS ของสภาเทคนิคการแพทย์">
+            
+            <img src="img/1437121.png" class="card-img-top p-3" alt="LogInS LAB">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">LogInS LAB</h5>
+              <p class="card-text text-muted">ปัจจุบัน บริษัท แล็บ พลัส จำกัด ได้พัฒนาปรับปรุงโปรแกรม LIS ของบริษัทฯ....</p>
+              <button class="btn btn-outline-primary btn-sm mt-2">Open Detail</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm openDetail"
+              data-bs-toggle="modal" data-bs-target="#detailModal"
+              data-title="โปรแกรมธนาคารเลือด (Blood Bank)"
+              data-img="img/bloodbank.jpg"
+              data-desc="โปรแกรมธนาคารเลือด (Blood Bank) จัดการบริหารคลังเลือด ข้อมูลการบริจาค งานบริการเลือด เรียกดูรายงานและสถิติต่างๆ"
+              data-video="https://www.youtube.com/embed/VIDEO_ID">
+
+            <img src="img/blood.png" class="card-img-top p-3" alt="Blood Bank">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">โปรแกรมธนาคารเลือด <br>(Blood Bank)<br></h5>
+              <p class="card-text text-muted">โปรแกรมธนาคารเลือด (Blood Bank) จัดการบริหารคลังเลือด...</p>
+              <button class="btn btn-outline-primary btn-sm mt-2">Open Detail</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm openDetail"
+              data-bs-toggle="modal" data-bs-target="#detailModal"
+              data-title="โปรแกรมแล็บออนไลน์"
+              data-img="img/6.png"
+              data-desc="โปรแกรมแล็บออนไลน์ รองรับการทำงานของห้องปฏิบัติการในส่วน การสั่งตรวจ,เรียกดูผลตรวจ,ข้อมูลผู้ป่วย และออกผลรายงานข้อมูลต่างๆ ทำงานผ่านเว็บบราวเซอร์ไม่ต้องติดตั้งโปรแกรม รองรับการทำงานผ่านมือถือและแท็บเล็ต">
+            
+            <img src="img/labonline.png" class="card-img-top p-3" alt="Lab Online">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">โปรแกรมแล็บออนไลน์</h5>
+              <p class="card-text text-muted">โปรแกรมแล็บออนไลน์ รองรับการทำงานของห้องปฏิบัติการในส่วน...</p>
+              <button class="btn btn-outline-primary btn-sm mt-2">Open Detail</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="detailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="detailTitleHeader"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="detailImg" src="" alt="Detail Image" class="img-fluid rounded shadow mb-4" style="max-height:350px;">
+          <p id="detailDesc" class="text-start px-3"></p>
+
+
+
+          <div id="videoSection" class="mt-3 d-none">
+            <h5 class="mb-3 fw-bold">วีดีโอเพิ่มเติม</h5>
+            <div class="ratio ratio-16x9">
+              <iframe id="video-frame" src="" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div id="imgViewer" class="img-viewer d-none">
+            <span class="close-viewer">&times;</span>
+            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <img id="viewerImg" src="" alt="">
+            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- Image Popup -->
+    <div id="imgPopup" class="popup-overlay d-none">
+        <span class="popup-close">&times;</span>
+        <img id="popupImg" src="" alt="popup image">
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
