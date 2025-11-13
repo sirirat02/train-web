@@ -1,0 +1,248 @@
+/* Import Google Font - Prompt (ถ้ายังไม่ได้ใส่ใน Custom CSS) */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;700&display=swap');
+
+/* --- Global Styles --- */
+body {
+    /* ใช้ Font Prompt ตามความนิยมในการทำเว็บภาษาไทย */
+    font-family: 'Prompt', sans-serif; 
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    /* ป้องกันการเลื่อนด้านข้างที่ไม่จำเป็น */
+    overflow-x: hidden; 
+}
+section.products-section {
+    max-width: 1200px; /* สามารถปรับลดหรือเพิ่มได้ตามต้องการ เช่น 1000px */
+    margin: auto;
+    padding: 3rem 1rem !important; /* เพิ่ม Padding แนวตั้งและแนวนอนเล็กน้อย */
+}
+
+
+.card {
+  position: center;
+  width: 300px;
+  display: flex;
+  flex-direction: column; /* จัดลูกในแนวตั้ง */
+  justify-content: space-between; /* ดึงปุ่มไปด้านล่าง */
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  flex: 1; /* ทำให้การ์ดเท่ากันใน row */
+
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    max-height: 100px;
+    object-fit: contain;
+    width: 100%;
+    /* ทำให้รูปภาพมี padding และ background เพื่อให้ดูมีพื้นที่ */
+    padding: 1rem;
+    background-color: #fff; /* หรือสีที่คุณต้องการ */
+}
+
+.card-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* ดันเนื้อหาขึ้นบนและปุ่มลงล่าง */
+    flex-grow: 1; /* ทำให้ card-body ขยายเต็มพื้นที่ที่เหลือของการ์ด */
+}
+
+.card-title {
+    font-size: 1.1rem;
+    color: #004d99;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-text {
+    font-size: 0.85rem;
+    min-height: 40px; /* รักษาความสูงขั้นต่ำของข้อความ */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    margin-bottom: 1rem; /* เพิ่มระยะห่างด้านล่างของข้อความก่อนถึงปุ่ม */
+    flex-grow: 1; /* ทำให้ข้อความขยายเต็มพื้นที่ที่เหลือ */
+}
+
+/* ปรับปุ่ม */
+.card-body .btn {
+    /* ทำให้ปุ่มมีขนาดเท่ากันทุกอัน */
+    width: 100%; /* หรือกำหนดความกว้างตายตัว เช่น max-width: 150px; */
+    max-width: 180px; /* กำหนดความกว้างสูงสุดของปุ่ม */
+    margin-left: auto; /* จัดกึ่งกลางปุ่ม */
+    margin-right: auto; /* จัดกึ่งกลางปุ่ม */
+    padding: 0.5rem 1rem; /* เพิ่ม padding ให้ปุ่มดูใหญ่ขึ้น */
+}
+
+/* --- Grid and Spacing (ลดระยะระหว่างการ์ด) --- */
+.row.g-4 {
+    --bs-gutter-x: 10rem;
+    --bs-gutter-y: 10.5rem;
+}
+
+/* ===== รูปใน Modal ===== */
+.modal-body img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  cursor: zoom-in;
+}
+
+/* Hover: ซูมเบา ๆ บอกว่าซูมได้ */
+.modal-body img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ปรับหัวข้อใน Modal */
+.modal-title {
+  font-size: 2rem;          /*  ขยายขนาดตัวอักษร (จากเดิม h5) */
+  text-align: center;       /* จัดให้อยู่ตรงกลาง */
+  width: 100%;              /* ให้ข้อความเต็มบรรทัด */
+  font-weight: 700;         /* ทำให้ตัวหนาขึ้น */
+  color: #004d99;        /* เปลี่ยนสีหัวข้อ */
+}
+
+/* จัด header ของ modal ให้อยู่ตรงกลางด้วย */
+.modal-header {
+  display: flex;
+  justify-content: center;  /* ✅ จัดกลางแนวนอน */
+  align-items: center;      /* จัดกลางแนวตั้ง */
+  border-bottom: 2px solid #eee;
+}
+
+/* Zoom เต็มจอเมื่อคลิก */
+.img-zoomed {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) scale(1.5) !important;
+  z-index: 2000 !important;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.6) !important;
+  cursor: zoom-out !important;
+  transition: transform 0.4s ease;
+}
+
+
+/* ===== Image Popup Style ===== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.popup-overlay img {
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  cursor: zoom-out;
+}
+
+.popup-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* เปลี่ยนสีปุ่มเลื่อน (ใน carousel ของ detail modal) เป็นสีดำโปร่ง */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  background-size: 60%;
+}
+
+/* ปรับขนาดและเงาเล็กน้อยให้ดูสวย */
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+  filter: invert(1);
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 8%;
+}
+
+/* ปุ่มเลื่อน Lightbox */
+.btn-prev, .btn-next {
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-prev:hover, .btn-next:hover {
+  background-color: rgba(0,0,0,0.9);
+}
+
+
+
+body.modal-open {
+  overflow: hidden !important;
+}
+.modal-backdrop.show {
+  opacity: 0.5 !important;
+}
+
+    /* Lightbox Popup */
+    #imgPopup {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+    #imgPopup img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    }
+    #imgPopup .btn-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      padding: 10px 20px;
+      user-select: none;
+    }
+    #imgPopup .btn-prev { left: 20px; }
+    #imgPopup .btn-next { right: 20px; }
+    #imgPopup .popup-close {
+      position: absolute;
+      top: 20px; right: 30px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+
+
