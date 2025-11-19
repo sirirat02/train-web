@@ -1,0 +1,260 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;700&display=swap');
+
+/* --- Global Styles --- */
+body {
+    /* ใช้ Font Prompt ตามความนิยมในการทำเว็บภาษาไทย */
+    font-family: 'Prompt', sans-serif; 
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    overflow-x: hidden; 
+}
+section.products-section {
+    max-width: 1200px; /* สามารถปรับลดหรือเพิ่มได้ตามต้องการ เช่น 1000px */
+    margin: auto;
+    padding: 3rem 1rem ; /* เพิ่ม Padding แนวตั้งและแนวนอนเล็กน้อย */
+}
+
+/* จัดการ์ดให้อยู่ตรงกลาง */
+section.products-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 3rem 1rem ;
+}
+
+/* ใช้เฉพาะ Bootstrap alignment */
+.products-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Card */
+.card {
+  max-width: 300px;   /* กำหนดแค่สูงสุด */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background:#F0F0F0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  color: #004d99;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background-color:#DDDAE4;
+}
+
+.card img {
+    max-height: 80px;
+    width: auto;
+    display: block;
+    margin: 0 auto 1rem auto;
+    padding: 0; /* ตัด padding ที่ทำให้เพี้ยนออก */
+    object-fit: contain;
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-text {
+  min-height: 60px;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.row.g-4 {
+    --bs-gutter-x: 3rem;
+}
+
+/* ===== รูปใน Modal ===== */
+.modal-body img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  cursor: zoom-in;
+}
+
+/* Hover: ซูมเบา ๆ บอกว่าซูมได้ */
+.modal-body img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ปรับหัวข้อใน Modal */
+.modal-title {
+  font-size: 2rem;          /*  ขยายขนาดตัวอักษร (จากเดิม h5) */
+  text-align: center;       /* จัดให้อยู่ตรงกลาง */
+  width: 100%;              /* ให้ข้อความเต็มบรรทัด */
+  font-weight: 700;         /* ทำให้ตัวหนาขึ้น */
+  color: #004d99;        /* เปลี่ยนสีหัวข้อ */
+}
+
+/* จัด header ของ modal ให้อยู่ตรงกลางด้วย */
+.modal-header {
+  display: relative;
+  justify-content: center;  /* จัดกลางแนวนอน */
+  align-items: center;      /* จัดกลางแนวตั้ง */
+  border-bottom: 2px solid #eee;
+}
+
+.modal-dialog {
+    max-width: 800px;
+}
+
+.modal-content {
+    overflow: hidden; /* ป้องกัน scroll บน content */
+}
+
+.modal-body {
+    max-height: 70vh; /* จำกัดความสูงของ body */
+    overflow-y: auto; /* scroll เฉพาะเนื้อหา */
+}
+
+/* Zoom เต็มจอเมื่อคลิก */
+.img-zoomed {
+  position: fixed ;
+  top: 50% ;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5) ;
+  z-index: 2000 ;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.6) ;
+  cursor: zoom-out ;
+  transition: transform 0.4s ease;
+}
+
+
+/* ===== Image Popup Style ===== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.popup-overlay img {
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  cursor: zoom-out;
+}
+
+.popup-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* เปลี่ยนสีปุ่มเลื่อน (ใน carousel ของ detail modal) เป็นสีดำโปร่ง */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  background-size: 60%;
+}
+
+/* ปรับขนาดและเงาเล็กน้อยให้ดูสวย */
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+  filter: invert(1);
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 8%;
+}
+
+/* ปุ่มเลื่อน Lightbox */
+.btn-prev, .btn-next {
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-prev:hover, .btn-next:hover {
+  background-color: rgba(0,0,0,0.9);
+}
+
+body.modal-open {
+  overflow: hidden ;
+}
+.modal-backdrop.show {
+  opacity: 0.5 ;
+}
+
+/* Lightbox Popup */
+#imgPopup {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+#imgPopup img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+#imgPopup .btn-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  user-select: none;
+}
+
+#imgPopup .btn-prev { left: 20px; }
+
+#imgPopup .btn-next { right: 20px; }
+
+#imgPopup .popup-close {
+  position: absolute;
+  top: 20px; right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.description {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 900px;    /* จำกัดความกว้าง */
+  margin-bottom: 50px;
+  color: #555;         
+}
+ 

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+
+  <!-- Product Section -->
+<section class="py-5 bg-light products-section">
+  <div class="container">
+    <h1 class="text-center mb-3 fw-bold">สินค้าและบริการ</h1>
+    <p class="text-center mx-auto description" style="max-width:800px;">
+      ออกแบบและติดตั้ง ระบบ LIS สำหรับห้องปฏิบัติการทางการแพทย์ ทั้งโรงพยาบาลรัฐบาลและโรงพยาบาลเอกชน 
+      ตั้งแต่โรงพยาบาลชุมชน ถึงโรงพยาบาลศูนย์
+    </p>
+
+
+    <!--  ใช้ row เดียว -->
+    <div class="row g-3 justify-content-center">
+
+      <!-- Card 1 -->
+      <div class="col-md-3">     
+        <div class="card h-100 shadow-sm openDetail"
+            data-bs-toggle="modal" data-bs-target="#detailModal"
+            data-title="LogInS LAB"
+            data-images="imges/lisLab/lislab1.jpg,imges/lisLab/lislab2.jpg,imges/lisLab/lislab3.jpg,imges/lisLab/lislab4.jpg,imges/lisLab/lislab5.jpg,imges/lisLab/lislab6.jpg"
+            data-desc="ปัจจุบัน บริษัท แล็บ พลัส จำกัด ได้พัฒนาปรับปรุงโปรแกรม LIS ของบริษัทฯ ให้สามารถรองรับการทำงานของห้องปฏิบัติการในโรงพยาบาลได้ทุกขนาด รวมถึงพัฒนาคุณลักษณะและความสามารถของโปรแกรม ให้สอดคล้องกับมาตรฐานระบบ LIS ของสภาเทคนิคการแพทย์">
+          
+          <img src="img/1437121.png" class="card-img-top p-3" alt="LogInS LAB">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">LogInS LAB</h5>
+            <p class="card-text text-muted">ปัจจุบัน บริษัท แล็บ พลัส จำกัด ได้พัฒนาปรับปรุงโปรแกรม LIS ของบริษัทฯ....</p>
+            <button class="btn btn-outline-primary btn-sm mt-2">Open Detail</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm openDetail"
+            data-bs-toggle="modal" data-bs-target="#detailModal"
+            data-title="โปรแกรมธนาคารเลือด (Blood Bank)"
+            data-images="imges/BloodBank/bloodbank1.jpg,imges/BloodBank/bloodbank2.jpg,imges/BloodBank/bloodbank3.jpg,imges/BloodBank/bloodbank4.jpg,imges/BloodBank/bloodbank5.jpg,imges/BloodBank/bloodbank6.jpg"
+            data-desc="โปรแกรมธนาคารเลือด (Blood Bank) จัดการบริหารคลังเลือด ข้อมูลการบริจาค งานบริการเลือด เรียกดูรายงานและสถิติต่างๆ"
+            data-video="https://www.youtube.com/embed/wNAtrMZj2EQ">
+
+          <img src="img/blood.png" class="card-img-top p-3" alt="Blood Bank">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">โปรแกรมธนาคารเลือด <br>(Blood Bank)<br></h5>
+            <p class="card-text text-muted">โปรแกรมธนาคารเลือด (Blood Bank) จัดการบริหารคลังเลือด..</p>
+            <button class="btn btn-outline-primary btn-sm mt-2">Open Detail</button> 
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm openDetail"
+            data-bs-toggle="modal" data-bs-target="#detailModal"
+            data-title="โปรแกรมแล็บออนไลน์"
+            data-images="imges/LabOnline/Labonline1.png,imges/LabOnline/Labonline2.png,imges/LabOnline/Labonline3.png,imges/LabOnline/Labonline4.png,imges/LabOnline/Labonline5.png"
+            data-desc="โปรแกรมแล็บออนไลน์ รองรับการทำงานของห้องปฏิบัติการในส่วน การสั่งตรวจ,เรียกดูผลตรวจ,ข้อมูลผู้ป่วย และออกผลรายงานข้อมูลต่างๆ ทำงานผ่านเว็บบราวเซอร์ไม่ต้องติดตั้งโปรแกรม รองรับการทำงานผ่านมือถือและแท็บเล็ต">
+          
+          <img src="img/labonline.png" class="card-img-top p-3" alt="Lab Online">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">โปรแกรมแล็บออนไลน์</h5>
+            <p class="card-text text-muted">โปรแกรมแล็บออนไลน์ รองรับการทำงานของห้องปฏิบัติการในส่วน...</p>
+            <button class="btn btn-outline-primary btn-sm mt-2">Open Detail</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="detailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="detailTitleHeader"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+
+          <!-- Carousel -->
+          <div id="detailCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carouselImages"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#detailCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#detailCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+
+          <p id="detailDesc" class="text-start px-3"></p>
+          <!--  video -->
+          <div id="videoSection" class="mt-4 d-none">
+            <h5 class="mb-3 fw-bold">วีดีโอเพิ่มเติม</h5>
+            <div class="ratio ratio-16x9">
+              <iframe id="video-frame" src="" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <!-- Lightbox -->
+          <div id="imgPopup">
+            <span class="popup-close">&times;</span>
+            <span class="btn-nav btn-prev"><i class="fas fa-chevron-left"></i></span>
+            <img id="popupImg" src="">
+            <span class="btn-nav btn-next"><i class="fas fa-chevron-right"></i></span>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const modalEl = document.getElementById('detailModal');
+        const bsModal = new bootstrap.Modal(modalEl);
+        const popup = document.getElementById("imgPopup");
+        const popupImg = document.getElementById("popupImg");
+        const prevBtn = document.querySelector(".btn-prev");
+        const nextBtn = document.querySelector(".btn-next");
+        const closeBtn = document.querySelector(".popup-close");
+        const videoSection = document.getElementById("videoSection");
+        const videoFrame = document.getElementById("video-frame");
+        const carousel = document.getElementById('detailCarousel');
+        
+        
+        let currentImages = [];
+        let currentIndex = 0;
+
+        function openLightbox() {
+            popupImg.src = currentImages[currentIndex].trim();
+            popup.style.display = "flex";
+        }
+
+        function closeLightbox() {
+            popup.style.display = "none";
+        }
+
+        function showNext() {
+            currentIndex = (currentIndex + 1) % currentImages.length;
+            openLightbox();
+        }
+
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+            openLightbox();
+        }
+
+        if (nextBtn) nextBtn.addEventListener("click", showNext);
+        if (prevBtn) prevBtn.addEventListener("click", showPrev);
+        if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+
+        document.querySelectorAll('.openDetail').forEach(card => {
+            card.addEventListener('click', () => {
+                const title = card.dataset.title || '';
+                const desc = card.dataset.desc || '';
+                const images = card.dataset.images ? card.dataset.images.split(',') : [];
+                const video = card.dataset.video || ''; 
+                
+
+                document.getElementById('detailTitleHeader').textContent = title;
+                document.getElementById('detailDesc').textContent = desc;
+
+                const carouselContainer = document.getElementById('carouselImages');
+                carouselContainer.innerHTML = images.map((src, i) => `
+                    <div class="carousel-item ${i === 0 ? 'active' : ''}">
+                      <img src="${src.trim()}" class="d-block w-100 rounded shadow detail-img"
+                        style="max-height:350px;object-fit:contain;cursor:pointer;">
+                    </div>`).join('');
+
+                if (video) {
+                    videoSection.classList.remove("d-none");
+                    videoFrame.src = video;
+                } else {
+                    videoSection.classList.add("d-none");
+                    videoFrame.src = "";
+                    setTimeout(() => {
+                      videoFrame.src = video;
+                    }, 50);
+
+                }
+                
+                bsModal.show();
+                currentImages = images;
+
+                setTimeout(() => {
+                    document.querySelectorAll('.detail-img').forEach((img, index) => {
+                        img.addEventListener('click', () => {
+                            currentIndex = index;
+                            openLightbox();
+                        });
+                    });
+                }, 300);
+            });
+        });
+
+        modalEl.addEventListener('hidden.bs.modal', () => {
+            videoFrame.src = "";
+        });
+    });
+
+  
+    const carousel = document.getElementById('detailCarousel');
+
+    // 1️ ลูกกลิ้งเมาส์
+    carousel.addEventListener('wheel', (event) => {
+      event.preventDefault();
+      if (event.deltaY > 0) {
+        // หมุนลง = ถัดไป
+        const nextBtn = carousel.querySelector('.carousel-control-prev');
+        nextBtn.click();
+      } else {
+        // หมุนขึ้น = ก่อนหน้า
+        const prevBtn = carousel.querySelector('.carousel-control-next');
+        prevBtn.click();
+      }
+    });
+
+    // 2️ เมาส์ 
+    let startX = 0;
+    let isDown = false;
+
+    carousel.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.clientX;
+    });
+
+    carousel.addEventListener('mouseup', (e) => {
+      if (!isDown) return;
+      const diff = e.clientX - startX;
+      if (diff > 50) {
+        const prevBtn = carousel.querySelector('.carousel-control-prev');
+        prevBtn.click();
+      } else if (diff < -50) {
+        const nextBtn = carousel.querySelector('.carousel-control-next');
+        nextBtn.click();
+      }
+      isDown = false;
+    });
+
+    // 3️ คีย์บอร์ด 
+    document.addEventListener('keydown', (e) => {
+      if (!document.getElementById('detailModal').classList.contains('show')) return;
+      if (e.key === 'ArrowLeft') {
+        const prevBtn = carousel.querySelector('.carousel-control-prev');
+        prevBtn.click();
+      } else if (e.key === 'ArrowRight') {
+        const nextBtn = carousel.querySelector('.carousel-control-next');
+        nextBtn.click();
+      }
+    }); 
+  </script>
+
+</body>
+</html>
